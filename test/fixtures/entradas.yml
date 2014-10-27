@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fraude: false
+  obs: MyText
+  governador_1: 1
+  governador_2: 1
+  aecio: 1
+  dilma: 1
+
+two:
+  fraude: false
+  obs: MyText
+  governador_1: 1
+  governador_2: 1
+  aecio: 1
+  dilma: 1

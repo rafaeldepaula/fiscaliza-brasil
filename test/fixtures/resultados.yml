@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  governador_1: 1
+  governador_2: 1
+  aecio: 1
+  dilma: 1
+  sessao_id: 
+
+two:
+  governador_1: 1
+  governador_2: 1
+  aecio: 1
+  dilma: 1
+  sessao_id: 

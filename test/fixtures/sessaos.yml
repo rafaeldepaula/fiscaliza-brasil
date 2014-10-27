@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  zona: MyString
+  municipio: MyString
+  estado: 
+  fiscalizada: false
+
+two:
+  name: MyString
+  zona: MyString
+  municipio: MyString
+  estado: 
+  fiscalizada: false
