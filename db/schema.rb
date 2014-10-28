@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141028033604) do
+ActiveRecord::Schema.define(version: 20141028184235) do
 
   create_table "entradas", force: true do |t|
     t.boolean  "fraude",       default: false
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20141028033604) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "fiscalizada", default: false
+    t.boolean  "erro",        default: false
   end
 
   add_index "imagens", ["sessao_id"], name: "index_imagens_on_sessao_id"

@@ -5,9 +5,11 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :imagens
+  # patch 'erro_imagem', 'imagens#erro', as: 'erro_imagem'
+
   get 'pages/index'
 
-  get 'entradas/new'
 
   get 'estados/index'
 
