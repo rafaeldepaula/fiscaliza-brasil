@@ -42,3 +42,40 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'brazilian-rails'
+
+
+
+group :development do
+#   gem 'letter_opener'
+#   gem 'meta_request'
+#   gem 'rack-mini-profiler'
+#   gem 'bullet'
+#   gem 'spring'
+#   gem 'spring-commands-rspec'
+  gem 'rails_db_info'
+end
+
+group :test, :development do
+  # gem 'pry-rails'
+  # gem 'dotenv-rails'
+  # gem 'rspec-rails', '~> 3.0.0'
+  # gem 'guard', '>=2.1.0'
+  # gem 'guard-rspec'
+  # gem 'terminal-notifier-guard'
+  # gem 'rb-fsevent', '~> 0.9.1'
+  # gem 'quiet_assets'
+  # gem 'guard-livereload'
+  # gem 'guard-spin'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  # gem 'factory_girl_rails'
+end
+
+# group :test do
+#   gem 'stripe-ruby-mock', '~> 1.10.1.7'
+#   gem 'database_cleaner'
+#   gem 'capybara'
+#   gem 'shoulda-matchers', require: false
+#   gem 'selenium-webdriver'
+# end
