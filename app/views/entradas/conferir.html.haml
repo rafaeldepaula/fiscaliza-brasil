@@ -1,2 +1,34 @@
-%h1 Entradas#conferir
-%p Find me in app/views/entradas/conferir.html.erb
+.row
+  .col-xs-12.col-md-6
+    %h2.text-center Seu Resultado
+    .row
+      .col-xs-12.col-md-6.col-md-offset-3
+        %form{:role => "form"}
+          .form-group
+            %label Dilma
+            %input.form-control{ type: "text", value: '123'}
+          .form-group
+            %label Aécio Neves
+            %input.form-control{ type: "text", value: '123'}
+  .col-xs-12.col-md-6
+    %h2.text-center Resultado Oficial TSE
+    .row
+      .col-xs-12.col-md-6.col-md-offset-3
+        %form{:role => "form"}
+          .form-group
+            %label Dilma
+            %input.form-control{ type: "text", value: '123', "disabled" => ""}
+          .form-group
+            %label Aécio Neves
+            %input.form-control{ type: "text", value: '123', "disabled" => ""}
+  %br
+  %br
+  %br
+  .row
+    .col-xs-12.col-md-6.col-md-offset-3
+      .text-center
+        %button.btn.btn-default{:href => "#"} Voltar para conferir as fotos novamente
+        %p
+        %button.btn.btn-success{:href => "#"} Essa urna está OK! Fiscalizar próxima urna
+        %p
+        %button.btn.btn-danger{:href => "#"} Acho que essa urna pode estar fraudada

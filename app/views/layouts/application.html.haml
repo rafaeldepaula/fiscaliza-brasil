@@ -6,4 +6,24 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    = yield
+    %nav.navbar.navbar-default{:role => "navigation"}
+      .col-xs-12.col-md-10.col-md-offset-1
+        .container-fluid
+          .navbar-header
+            %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+              %span.sr-only Toggle navigation
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            %a.navbar-brand{ href: root_path } Fiscalize
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            %ul.nav.navbar-nav.navbar-right
+              %li
+                %a{:href => "#"} Veja as Denúncias
+              %li.active
+                %a{:href => "#"} Fiscalizar
+        .navbar-collapse
+    .container-fluid
+      .row
+        .col-xs-12.col-md-10.col-md-offset-1
+          = yield
