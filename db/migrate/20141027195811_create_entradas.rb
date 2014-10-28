@@ -8,6 +8,7 @@ class CreateEntradas < ActiveRecord::Migration
       t.integer :aecio
       t.integer :dilma
       t.references :sessao, index: true
+      t.references :imagen, index: true
 
       t.timestamps
     end

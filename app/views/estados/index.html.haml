@@ -1,2 +1,5 @@
 %h1 Estados#index
 %p Find me in app/views/estados/index.html.erb
+
+- @estados.each do |estado|
+  = estado.nome

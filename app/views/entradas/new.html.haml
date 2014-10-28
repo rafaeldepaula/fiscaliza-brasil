@@ -1,2 +1,14 @@
-%h1 Entradas#new
-%p Find me in app/views/entradas/new.html.erb
+%h1= @imagem.id
+
+= form_for @entrada do |f|
+  = f.label 'Aécio'
+  = f.number_field :aecio, required: true
+  = f.label 'Dilmais'
+  = f.number_field :dilma, required: true
+
+  = f.label @entrada.sessao.estado.governadors.first.nome
+  = f.number_field :governador_1, required: true
+  = f.label @entrada.sessao.estado.governadors.last.nome
+  = f.number_field :governador_2, required: true
+
+  = f.submit 'Continuar'

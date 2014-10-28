@@ -1,7 +1,7 @@
 class CreateSessaos < ActiveRecord::Migration
   def change
     create_table :sessaos do |t|
-      t.string :name
+      t.string :nome
       t.string :zona
       t.string :municipio
       t.references :estado, index: true

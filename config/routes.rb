@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
+  resources :entradas do
+    member do
+      get :conferir
+    end
+  end
+
   get 'pages/index'
 
   get 'entradas/new'
-
-  get 'entradas/conferir'
 
   get 'estados/index'
 

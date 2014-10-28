@@ -28,8 +28,11 @@ estados = [ "AC",
 
 estados.each do |uf|
   estado = Estado.create(nome: uf)
-  estado.sessaos.create( name: '001', zona: '001' )
-
   estado.governadors.create( nome: 'Governador 1')
   estado.governadors.create( nome: 'Governador 2')
+  sessao = estado.sessaos.create( nome: '001', zona: '001' )
+
+  (1..3).each do
+    sessao.imagens.create
+  end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141027195907) do
+ActiveRecord::Schema.define(version: 20141028033604) do
 
   create_table "entradas", force: true do |t|
     t.boolean  "fraude",       default: false
@@ -21,10 +21,12 @@ ActiveRecord::Schema.define(version: 20141027195907) do
     t.integer  "aecio"
     t.integer  "dilma"
     t.integer  "sessao_id"
+    t.integer  "imagen_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "entradas", ["imagen_id"], name: "index_entradas_on_imagen_id"
   add_index "entradas", ["sessao_id"], name: "index_entradas_on_sessao_id"
 
   create_table "estados", force: true do |t|
@@ -46,6 +48,7 @@ ActiveRecord::Schema.define(version: 20141027195907) do
     t.integer  "sessao_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "fiscalizada", default: false
   end
 
   add_index "imagens", ["sessao_id"], name: "index_imagens_on_sessao_id"
@@ -63,7 +66,7 @@ ActiveRecord::Schema.define(version: 20141027195907) do
   add_index "resultados", ["sessao_id"], name: "index_resultados_on_sessao_id"
 
   create_table "sessaos", force: true do |t|
-    t.string   "name"
+    t.string   "nome"
     t.string   "zona"
     t.string   "municipio"
     t.integer  "estado_id"
