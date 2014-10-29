@@ -1,39 +1,42 @@
-%h2.text-center Nessa foto ao lado, quantos votos cada candidato teve?
-.row
-  .col-xs-12.col-md-2
-    = form_for @entrada do |f|
-      .form-group
-        = f.label 'Dilma'
-        = f.telephone_field :dilma, required: true, class: 'form-control'
-      .form-group
-        = f.label 'Aécio Neves'
-        = f.telephone_field :aecio, required: true, class: 'form-control'
-      .form-group
-        = f.label @entrada.sessao.estado.governadors.first.nome
-        = f.telephone_field :governador_1, required: true, class: 'form-control'
-      .form-group
-        = f.label @entrada.sessao.estado.governadors.last.nome
-        = f.telephone_field :governador_2, required: true, class: 'form-control'
-      / %button.btn.btn-default{:type => "submit"} Continuar
-      = f.hidden_field :sessao_id, value: @imagem.sessao.id
-      = f.hidden_field :imagen_id, value: @imagem.id
-      = f.submit 'Continuar', class: 'btn btn-default btn-success btn-block'
+#check
+  %h2.text-left Nessa foto ao lado, quantos votos cada candidato teve?
+  %h3.text-left (Passe o mouse em cima da foto para ver a lupa)
+  .row
+    .col-xs-12.col-md-2
+      = form_for @entrada do |f|
+        .form-group
+          = f.label 'Dilma'
+          = f.telephone_field :dilma, required: true, class: 'form-control'
+        .form-group
+          = f.label 'Aécio Neves'
+          = f.telephone_field :aecio, required: true, class: 'form-control'
+        .form-group
+          = f.label @entrada.sessao.estado.governadors.first.nome
+          = f.telephone_field :governador_1, required: true, class: 'form-control'
+        .form-group
+          = f.label @entrada.sessao.estado.governadors.last.nome
+          = f.telephone_field :governador_2, required: true, class: 'form-control'
+        / %button.btn.btn-default{:type => "submit"} Continuar
+        = f.hidden_field :sessao_id, value: @imagem.sessao.id
+        = f.hidden_field :imagen_id, value: @imagem.id
+        = f.submit 'Continuar', class: 'btn btn-default btn-success btn-block'
 
-    %p
-    = form_for @imagem do |f|
-      = f.hidden_field :erro, value: true
+      %p
+      = form_for @imagem do |f|
+        = f.hidden_field :erro, value: true
 
-      = f.submit 'BU problemático', class: 'btn btn-warning btn-block'
+        = f.submit 'BU problemático', class: 'btn btn-warning btn-block'
 
-    %p.small.text-center
-      ID da imagem:
-      = @imagem.id
-  .col-xs-12.col-md-10
-    .row
-      .col-md-4
-        .mag
-          %img{:alt => "", "data-toggle" => "magnify", :src => "http://i.imgur.com/e2TgB2C.jpg"}
-        / .mag
-        /   %img{:alt => "", "data-toggle" => "magnify", :src => "http://i.imgur.com/GfEYMzo.jpg"}
-        / .mag
-        /   %img{:alt => "", "data-toggle" => "magnify", :src => "http://i.imgur.com/xvS2zLx.jpg"}
+
+        %p.small.text-center.image-id
+          ID da imagem:
+          = @imagem.id
+    .col-xs-12.col-md-10
+      .row
+        .col-md-4
+          .mag
+            %img{:alt => "", "data-toggle" => "magnify", :src => "http://i.imgur.com/e2TgB2C.jpg"}
+          / .mag
+          /   %img{:alt => "", "data-toggle" => "magnify", :src => "http://i.imgur.com/GfEYMzo.jpg"}
+          / .mag
+          /   %img{:alt => "", "data-toggle" => "magnify", :src => "http://i.imgur.com/xvS2zLx.jpg"}
