@@ -16,11 +16,13 @@
         = f.telephone_field :governador_2, required: true, class: 'form-control'
       / %button.btn.btn-default{:type => "submit"} Continuar
       = f.hidden_field :sessao_id, value: @imagem.sessao.id
+      = f.hidden_field :imagen_id, value: @imagem.id
       = f.submit 'Continuar', class: 'btn btn-default btn-success btn-block'
 
     %p
     = form_for @imagem do |f|
       = f.hidden_field :erro, value: true
+
       = f.submit 'BU problemático', class: 'btn btn-warning btn-block'
 
     %p.small.text-center

@@ -24,7 +24,12 @@ class EntradasController < ApplicationController
   def update
     get_entrada
     if @entrada.update_attributes entrada_params
-      redirect_to conferir_entrada_path(@entrada)
+      if params[:entrada][:fiscalizada]
+        @entrada.sessao.update_attributes( fiscalizada: true )
+        redirect_to new_entrada_path
+      else
+        redirect_to conferir_entrada_path(@entrada)
+      end
     else
       render :new
     end
@@ -41,6 +46,6 @@ class EntradasController < ApplicationController
   end
 
   def entrada_params
-    params.require(:entrada).permit( :aecio, :dilma, :governador_1, :governador_2, :sessao_id )
+    params.require(:entrada).permit( :aecio, :dilma, :governador_1, :governador_2, :sessao_id, :obs, :fraude, :imagen_id )
   end
 end
